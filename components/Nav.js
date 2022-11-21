@@ -10,8 +10,14 @@ const Nav = () => {
         {Object.entries(requests).map(([key, { title, url }]) => (
           <h2
             key={key}
-            onClick={() => router.push(`/?genre=${key}`)}
+            onClick={() => router.push(`movies/?genre=${key}`)}
             className="cursor-pointer transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500"
+            style={
+              router.query.genre &&
+              router.query.genre.includes(title.split(" ").join(""))
+                ? { fontWeight: 700, color: "red" }
+                : { fontWeight: 400 }
+            }
           >
             {title}
           </h2>

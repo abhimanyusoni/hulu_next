@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { forwardRef } from "react";
 
 const Thumbnail = forwardRef(({ result }, ref) => {
@@ -6,19 +7,23 @@ const Thumbnail = forwardRef(({ result }, ref) => {
 
   return (
     <div ref={ref} className="group cursor-pointer p-2">
-      <Image
-        src={`${BASE_URL}${result.backdrop_path}`}
-        layout="responsive"
-        width={1920}
-        height={1080}
-        className="group-hover:scale-110 transition-all duration-300"
-      />
-      <div className="py-2">
-        <p className="truncate max-w-md">{result.overview}</p>
-        <h2 className="text-xl font-bold mt-1">
-          {result.title || result.original_name}
-        </h2>
-      </div>
+      <Link href={`/movies/${result.id}`}>
+        <a>
+          <Image
+            src={`${BASE_URL}${result.backdrop_path}`}
+            layout="responsive"
+            width={1920}
+            height={1080}
+            className="group-hover:scale-110 transition-all duration-300 rounded-lg"
+          />
+          <div className="py-2">
+            <p className="truncate max-w-md">{result.overview}</p>
+            <h2 className="text-xl font-bold mt-1">
+              {result.title || result.original_name}
+            </h2>
+          </div>
+        </a>
+      </Link>
     </div>
   );
 });

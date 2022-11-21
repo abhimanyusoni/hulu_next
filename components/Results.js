@@ -2,7 +2,6 @@ import Thumbnail from "./Thumbnail";
 import FlipMove from "react-flip-move";
 
 const Results = ({ results }) => {
-  console.log(results);
   return (
     <FlipMove
       enterAnimation="fade"

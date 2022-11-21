@@ -1,0 +1,19 @@
+.singularMovie {
+  text-align: center;
+  padding: 40px 100px;
+}
+
+.singularMovie h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.singularMovie img {
+  border-radius: 10px;
+}
+
+.singularMovie p {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
