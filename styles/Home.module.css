@@ -20,6 +20,9 @@
 
 @media (max-width: 767px) {
   .singularMovie {
-    padding: 40px 16px;
+    padding: 20px 16px;
+  }
+  .singularMovie h2 {
+    font-size: 20px;
   }
 }
