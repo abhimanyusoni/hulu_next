@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: "/hulu_next",
-  assetPrefix: "/hulu_next",
+  basePath: "/hulu_next/",
+  assetPrefix: "/hulu_next/",
 };
 
 module.exports = nextConfig;
