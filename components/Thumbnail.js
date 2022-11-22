@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { forwardRef } from "react";
 
-const Thumbnail = forwardRef(({ result }, ref) => {
+function Thumbnail({ result }) {
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
 
   return (
-    <div ref={ref} className="group cursor-pointer p-2">
+    <div className="group cursor-pointer p-2">
       <Link href={`/movies/${result.id}`}>
         <a>
           <Image
@@ -26,6 +26,6 @@ const Thumbnail = forwardRef(({ result }, ref) => {
       </Link>
     </div>
   );
-});
+}
 
 export default Thumbnail;
