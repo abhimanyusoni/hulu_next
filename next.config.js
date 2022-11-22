@@ -20,4 +20,6 @@ module.exports = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  basePath: "/hulu_next",
+  assetPrefix: "/hulu_next"
 };
