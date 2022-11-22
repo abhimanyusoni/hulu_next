@@ -7,7 +7,7 @@ const Results = ({ results }) => {
       enterAnimation="fade"
       className="px-1 sm:px-3 my-5 sm:grid md:grid-cols-2 xl:grid-cols-3 "
     >
-      {results.map((result) => (
+      {results?.map((result) => (
         <Thumbnail key={result.id} result={result} />
       ))}
     </FlipMove>
